@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New User Registration</title>
+
+<script>
+function showData()
+{
+var fname=document.getElementById("fname").value;
+var lname=document.getElementById("lname").value;
+var uname=document.getElementById("uname").value;
+var email=document.getElementById("email").value;
+
+document.getElementById("result").innerHTML =
+"<table border='1'>" +
+"<tr><th>First Name</th><td>"+fname+"</td></tr>"+
+"<tr><th>Last Name</th><td>"+lname+"</td></tr>"+
+"<tr><th>User Name</th><td>"+uname+"</td></tr>"+
+"<tr><th>Email</th><td>"+email+"</td></tr>"+
+"</table>";
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>User Registration</h2>
+
+<form>
+
+<fieldset>
+<legend>Personal Information</legend>
+
+First Name:
+<input type="text" id="fname" required><br><br>
+
+Last Name:
+<input type="text" id="lname" required><br><br>
+
+User Name:
+<input type="text" id="uname" required minlength="4"><br><br>
+
+Gender:
+<input type="radio" name="g">Male
+<input type="radio" name="g">Female<br><br>
+
+Known Languages:
+<input type="checkbox">English
+<input type="checkbox">Marathi
+<input type="checkbox">Hindi<br><br>
+
+Email:
+<input type="email" id="email" required><br><br>
+
+Password:
+<input type="password" required minlength="6"><br><br>
+
+Re-enter Password:
+<input type="password" required minlength="6"><br><br>
+
+<button type="button" onclick="showData()">Register</button>
+
+</fieldset>
+
+</form>
+
+<h3>Registered User Details</h3>
+
+<div id="result"></div>
+
+</body>
+</html>
