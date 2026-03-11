@@ -1,0 +1,58 @@
+<!-- 1)
+Using AJAX concept load data from given url 
+https://fakestoreapi.com/products
+
+and display data in html page in table format 
+
+	id | Title | price -->
+
+
+
+<html>
+
+<head>
+
+
+<title> Ajax  </title>
+     <script>
+        function loaddata(){
+          let xhttp= new XMLHttpRequest();
+          xhttp.open("get","https://fakestoreapi.com/products"
+
+       );     xhttp.send();
+            xhttp.onreadystatechange=function(){
+                if(this.xhttp == 4  && this.status==200){
+                    consol.log(this.responseText);
+                }
+                let d = JSON.stringify(this.responseText)  
+                      
+                    console.log(d)
+                    document.getElementById("d1").innerText = (d);
+
+            }
+    
+     }
+
+     </script>
+
+</head>
+
+<body>   
+
+  <h1>welcome to ajax file   </h1>
+<table border="1"  id="d1">   
+  <tr>
+    <th>  id    </th>
+  <th>  title  </th>
+   <th> price   </th>
+  </tr>
+  <tbody>
+   <td> 101        </td>
+    <td> this is ajax file   </td>
+    <td>    5000       </td>
+     </tbody>
+</table>
+
+<button onclick="loaddata()"  id="d1">  click here   </button>
+</body>
+</html>
