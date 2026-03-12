@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validation Example</title>
+
+<script>
+function validateInput(){
+
+    let input = document.getElementById("name");
+    let error = document.getElementById("error");
+
+    if(input.value == ""){
+        error.innerHTML = "Field is required";
+    }
+    else if(input.value.length < 3){
+        error.innerHTML = "Minimum length is 3";
+    }
+    else if(input.value.length > 10){
+        error.innerHTML = "Maximum length is 10";
+    }
+    else{
+        error.innerHTML = "Valid Input";
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+Name:
+<input type="text" id="name" minlength="3" maxlength="10" required>
+<button onclick="validateInput()">Submit</button>
+
+<span id="error" style="color:red"></span>
+
+</body>
+</html>

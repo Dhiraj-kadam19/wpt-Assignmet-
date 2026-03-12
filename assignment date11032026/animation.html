@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animation with Stop</title>
+
+<style>
+#box{
+    width:100px;
+    height:100px;
+    background:red;
+    position:relative;
+}
+</style>
+
+<script>
+let animation;
+
+function startAnimation(){
+    let pos = 0;
+    let box = document.getElementById("box");
+
+    animation = setInterval(function(){
+        pos++;
+        box.style.left = pos + "px";
+    },10);
+}
+
+function stopAnimation(){
+    clearInterval(animation);
+}
+</script>
+
+</head>
+
+<body onload="startAnimation()">
+
+<div id="box"></div>
+
+<br><br>
+<button onclick="stopAnimation()">Stop Animation</button>
+
+</body>
+</html>
