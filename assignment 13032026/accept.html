@@ -1,0 +1,88 @@
+<!-- 2) from html accept 
+    FirstName  textfield
+    LastName  textfield
+    birthDate    <input type="date"/>
+
+	
+  on button click <generate username>
+Generate UserName  as follows and display in P Tag 
+    first 2 characters from firstname 
+    +age+last2characters from lastname 
+ -->
+
+
+
+<html>
+<head>
+
+<title> welcome to html page      </title>
+
+
+
+
+<script>
+ function validate(){
+ let firstname=document.getElementsByName("firstname").value.trim();
+let lastname=document.getElementsByName("lastname").value.trim();
+let age=document.getElementsByName("age").value.trim();
+ }
+
+
+
+
+</script>
+
+<style>
+.container{
+    display: flex;
+width: 300px;
+height: 200px;
+background-color: aqua;
+border-radius: 20px;
+padding: 5%;
+justify-content: center;
+
+}
+.in{
+    padding-bottom: 5px;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<body   id="p1">
+   <!--<field style="box-sizing: border-box;"> -->
+<form  class ="container" >
+
+<h1>user name generate</h1>
+<div class="in">
+<label for="fname">first name:</label>
+<input type="text"  name="fname"  placeholder="firstname"/>
+<br>
+<label for="lname">lastname:</label>
+<input type="text" name="lname" placeholder="LastName"/>
+<br>
+<label for="birth" >BirthDate</label>
+<input type="date"  name="birth"> <br>
+<button onclick="validate">click me</button>
+</div>
+<p  id="result"> </p>
+</form>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
